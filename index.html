@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#38205f">
+    <meta name="description" content="MedQuest: pratique, revise e acompanhe sua evolução nos estudos médicos.">
+    <title>MedQuest — Aprenda. Pratique. Evolua.</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body><a class="skip" href="#main">Pular para o conteúdo</a>
+    <aside class="sidebar" id="sidebar"><a class="brand" href="#inicio"><span class="brand-mark">M+</span><span>med<span
+                    class="brand-light">quest</span><small>Aprenda. Pratique. Evolua.</small></span></a>
+        <nav aria-label="Navegação principal"><button class="nav active" data-page="inicio">⌂
+                <span>Início</span></button><button class="nav" data-page="questoes">▤ <span>Banco de
+                    questões</span></button><button class="nav" data-page="simulados">◷
+                <span>Simulados</span></button><button class="nav" data-page="revisoes">☆ <span>Minhas
+                    revisões</span></button><button class="nav" data-page="desempenho">▥
+                <span>Desempenho</span></button></nav>
+        <div class="side-bottom">
+            <div class="free-note"><b>Estude no seu ritmo</b>
+                <p>Gratuito, sem cadastro e com progresso salvo neste dispositivo.</p>
+            </div><button class="nav" id="themeToggle">◐ <span>Alternar tema</span></button><button class="nav"
+                id="backupBtn">⇧ <span>Backup dos dados</span></button><input type="file" id="backupFile"
+                accept="application/json" hidden>
+        </div>
+    </aside>
+    <div class="shell">
+        <header class="topbar"><button class="icon-btn mobile-menu" id="menuBtn" aria-label="Abrir menu">☰</button>
+            <div class="crumb">Área de estudos <span>/</span> <b id="crumb">Início</b></div>
+            <div class="top-actions"><span class="streak">✦ <b id="points">0</b> pontos</span>
+                <div class="avatar" aria-label="Estudante">E</div>
+            </div>
+        </header>
+        <main id="main" tabindex="-1">
+            <section id="page"></section>
+        </main>
+        <footer>MedQuest é uma plataforma educacional. O conteúdo não substitui avaliação ou orientação médica
+            individual.</footer>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="js/questions.js"></script>
+    <script src="js/app.js"></script>
+    <script>if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => { }));</script>
+</body>
+
+</html>
